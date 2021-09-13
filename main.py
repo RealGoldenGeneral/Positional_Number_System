@@ -6,16 +6,12 @@ number_of_digits = 0
 number_list = []
 
 while int_number != 0:
-    print('Remainder: ' + str(int(int_number % base)))
     number_list.append(str(int(int_number % base)))
-    print('Integer: ' + str(int(int_number // base)))
     int_number = (int_number // base)
 
 number_list.append('.')
 while fractional_number != 0 and number_of_digits <= 100:
-    print('Integer: ' + str(int(fractional_number * base)))
     number_list.append(str(int(fractional_number * base)))
-    print('Fractional: ' + str(fractional_number * base - int(fractional_number * base)))
     fractional_number = (fractional_number * base - int(fractional_number * base))
     number_of_digits += 1
 
